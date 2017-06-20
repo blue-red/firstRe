@@ -1,0 +1,20 @@
+spring:
+  #jpa配置
+  jpa:
+    database: default
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  #数据库连接配置
+  datasource:
+      #MSSQL
+      url: jdbc:sqlserver://localhost:1433;DatabaseName=testCore
+      username: sa
+      password: wizbank
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      tomcat:
+          max-wait: 10000
+          max-active: 20
+#session超时时间 24小时
+server:
+  port: 8901

@@ -1,0 +1,6 @@
+text\spring\boot\controller\ResourceController.class
+ApplicationAPP.class
+text\spring\boot\dao\ResourceDao.class
+text\spring\boot\service\ResourceService.class
+text\spring\boot\domain\Resources.class
+text\spring\boot\result\RestResultModule.class
