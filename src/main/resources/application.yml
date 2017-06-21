@@ -1,10 +1,5 @@
 spring:
   #jpa配置
-  jpa:
-    database: default
-    show-sql: true
-    hibernate:
-      ddl-auto: none
   #数据库连接配置
   datasource:
       #MSSQL
@@ -15,6 +10,10 @@ spring:
       tomcat:
           max-wait: 10000
           max-active: 20
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
 #session超时时间 24小时
 server:
   port: 8901
