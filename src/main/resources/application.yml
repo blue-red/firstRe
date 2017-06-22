@@ -14,6 +14,11 @@ spring:
     hibernate:
       ddl-auto: create
     show-sql: true
+
+  mybatis:
+      mapperLocations: classpath:mapper/*.xml
+      typeAliasesPackage: tk.mapper.model
+
 #session超时时间 24小时
 server:
   port: 8901
