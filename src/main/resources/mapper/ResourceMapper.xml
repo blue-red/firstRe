@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.text.spring.boot.mapper.ResourceMapper">
+
+    <select id="select"  resultType="java.lang.Long">
+        select COUNT (res_id) from Resources
+    </select>
+
+    <select id="selectResourcesList" resultMap="ResourceList">
+        select res_id,res_title,res_type,res_uuid from Resources
+    </select>
+
+    <resultMap id="ResourceList" type="com.text.spring.boot.domain.Resources">
+        <id column="res_id" property="resId" javaType="Long"></id>
+        <result column="res_title" property="resTitle" javaType="String"></result>
+        <result column="res_type" property="resType" javaType="String"></result>
+        <result column="res_uuid" property="resUuid" javaType="String"></result>
+    </resultMap>
+
+</mapper>

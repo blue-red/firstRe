@@ -1,3 +1,4 @@
+
 spring:
   #jpa配置
   #数据库连接配置
@@ -12,13 +13,11 @@ spring:
           max-active: 20
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
 
   mybatis:
       mapperLocations: classpath:mapper/*.xml
-      typeAliasesPackage: tk.mapper.model
-
-#session超时时间 24小时
+      type-aliases-packag: com.text.spring.boot.doamin
 server:
   port: 8901
